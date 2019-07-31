@@ -1,77 +1,78 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- *
- * @format
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React, { Component } from 'react';
 import {
-  StyleSheet,  //样式的变量
-  View,
+  Platform,
+  StyleSheet,
   Text,
-  ScrollView
+  View,
+  ScrollView,
+  FlatList,
 } from 'react-native';
 
-//引用组件
-import Card from './card'
+import Card from './card';
+import cardData from './card/mockData';
 
-const App = () => {
-  return (
-    <View style={[S.container,S.other]}>
-      <View style={S.header}>
-        <Text style={S.fontSize}>Home</Text>
+export default class App extends Component{
+
+
+
+  render() {
+
+    return (
+      <View style={S.container}>
+        <View style={S.header}>
+          <Text>Home</Text>
+        </View>
+        <View style={S.scrollView}>
+          <FlatList
+            data={cardData}
+            keyExtractor={(item)=>item.id}
+            renderItem={({item})=>{
+              return (
+                <Card
+                  {...{
+                    source: item.source,
+                    content: item.content,
+                    time: item.time
+                  }}
+                />
+              )
+            }}
+          />
+        </View>
+
       </View>
-      <View style={S.scrollView}>
-        <ScrollView 
-          //  style={S.scrollView}
-          // contentContainerStyle={S.scrollView}
-          >
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-        </ScrollView>
-      </View>
-      <Text>底部</Text>
-      
-    </View>
-  );
-};
-
-
-
-export default App;
+    );
+  }
+}
 
 const S = StyleSheet.create({
-  container:{
-    flex: 1,
+  container: {
+    flex:1,
     backgroundColor: '#F5FCFF',
-    // justifyContent: 'center', 
+    // justifyContent: 'center',
   },
-  header:{
-    height: 60,
-    width: '100%',
-    backgroundColor: '#E83A59',
+  header: {
+    paddingTop: 20,
+    height: 64,
     alignItems: 'center',
+    backgroundColor: '#E83A59',
     justifyContent: 'center',
-    paddingBottom: 20
   },
-  fontSize:{
-    fontSize: 28
+  title: {
+    fontSize: 17,
+    fontWeight: '600'
   },
-  scrollView:{
-    backgroundColor: 'red',
-    height: 300,
-    marginTop: 20,
-    marginBottom: 20
+  scrollView: {
+    // height: 300,
+    // backgroundColor: 'red',
+    // marginTop: 20,
+    // marginBottom: 20,
+
   }
-    
 })

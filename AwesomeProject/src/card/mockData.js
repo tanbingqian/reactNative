@@ -1,26 +1,32 @@
 export default [
-    {
-        key: Math.random(),
-        source: require('./img/avatar.png'),
-        content: '逝者长已矣，生者当如斯。李咏离开人世已过去九个多月时间了，至今仍有不少人追忆着他的辉煌过去，感谢他曾在舞台上给世人带来的欢声笑语。俗话说得好，爱屋逝者长已矣，生者当如斯。李咏离开人世已过去九个多月时间了，至今仍有不少人追忆着他的辉煌过去，感谢他曾在舞台上给世人带来的欢声笑语。俗话说得好，爱屋及乌，柔远能迩，很多人就将关心转移到了李咏家人身上，时刻为哈文和法图麦加油鼓气，一言一行都会成为热议不疲的焦点。',
-        time: '11:16'
-    },
-    {
-        key: Math.random(),
-        source: require('./img/avatar.png'),
-        content: '会议指出，当前我国经济发展面临新的风险挑战，国内经济下行压力加大，必须增强忧患意识，把握长期大势，抓住主要矛盾，善于化危为机，办好自己的事。',
-        time: '11:16'
-    },
-    {
-        key: Math.random(),
-        source: require('./img/avatar.png'),
-        content: '会议指出，当前我国经济发展面临新的风险挑战，国内经济下行压力加大，必须增强忧患意识，把握长期大势，抓住主要矛盾，善于化危为机，办好自己的事。',
-        time: '11:16'
-    },
-    {
-        key: Math.random(),
-        source: require('./img/avatar.png'),
-        content: '国内生产总值同比增长6.3%，全国城镇新增就业737万人，消费对经济增长的贡献率为60.1%……',
-        time: '11:16'
-    }
+  {
+    id: Math.random(),
+    source: require('./img/avatar.png'),
+    content: 'atom编辑器社区插件推荐- 最大的 感觉就是用着清爽， 依赖github强大的社区，基于atom的插件也特别丰富，按需',
+    time: '11:18'
+  },
+  {
+    id: Math.random(),
+    source: require('./img/avatar.png'),
+    content: 'he keyboard is dismissed interactively with the drag and moves in synchrony with the touch; dragging upwards cancels the dismissal. On android this is not supported and it will have the same behavior as none.',
+    time: '11:19'
+  },
+  {
+    id: Math.random(),
+    source: require('./img/avatar.png'),
+    content: 'atom编辑器社区插件推荐- 最大的 感觉就是用着清爽， 依赖github强大的社区，基于atom的插件也特别丰富，按需',
+    time: '11:16'
+  },
+  {
+    id: Math.random(),
+    source: require('./img/avatar.png'),
+    content: 'Determines whether the keyboard gets dismissed in response to a drag.',
+    time: '11:16'
+  },
+  {
+    id: Math.random(),
+    source: require('./img/avatar.png'),
+    content: 'When true, the scroll view bounces vertically when it reaches the end even if the content is smaller than the scroll vie',
+    time: '11:16'
+  },
 ]
